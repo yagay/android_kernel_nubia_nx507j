@@ -4386,7 +4386,6 @@ int addrconf_sysctl_forward(ctl_table *ctl, int write,
 	return ret;
 }
 
-<<<<<<< HEAD
 static
 int addrconf_sysctl_mtu(struct ctl_table *ctl, int write,
 			void __user *buffer, size_t *lenp, loff_t *ppos)
@@ -4402,8 +4401,6 @@ int addrconf_sysctl_mtu(struct ctl_table *ctl, int write,
 	return proc_dointvec_minmax(&lctl, write, buffer, lenp, ppos);
 }
 
-=======
->>>>>>> 38abbc664e2702a8a00898a75884443aa74c34e8
 static void dev_disable_change(struct inet6_dev *idev)
 {
 	if (!idev || !idev->dev)
@@ -4513,11 +4510,7 @@ static struct addrconf_sysctl_table
 			.data		= &ipv6_devconf.mtu6,
 			.maxlen		= sizeof(int),
 			.mode		= 0644,
-<<<<<<< HEAD
 			.proc_handler	= addrconf_sysctl_mtu,
-=======
-			.proc_handler	= proc_dointvec,
->>>>>>> 38abbc664e2702a8a00898a75884443aa74c34e8
 		},
 		{
 			.procname	= "accept_ra",

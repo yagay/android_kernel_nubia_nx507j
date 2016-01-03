@@ -58,10 +58,7 @@ Revision 1-0-0 04/16/2014
 #include <linux/hrtimer.h>
 #include <linux/ktime.h>
 #include <linux/device.h>
-<<<<<<< HEAD
 #include <linux/switch.h>
-=======
->>>>>>> 38abbc664e2702a8a00898a75884443aa74c34e8
 #include <linux/uaccess.h>
 #include <linux/delay.h>
 #include <linux/hwmon.h>
@@ -110,13 +107,10 @@ static dev_t const   hall_device_dev_t   = MKDEV(MISC_MAJOR, 252);
 
 static struct class  *hall_device_class;
 
-<<<<<<< HEAD
 static struct switch_dev cover_switch = {
         .name = "cover",
 };
 
-=======
->>>>>>> 38abbc664e2702a8a00898a75884443aa74c34e8
 static const struct dev_pm_ops hall_device_pm_ops = {
     .suspend = hall_device_suspend,
     .resume  = hall_device_resume,
@@ -204,10 +198,7 @@ static void hall_device_irq_work(struct work_struct *work)
     }
     else
     {
-<<<<<<< HEAD
 	switch_set_state(&cover_switch, hall_device_state==1 ? 1 : 0);
-=======
->>>>>>> 38abbc664e2702a8a00898a75884443aa74c34e8
         chip->state = hall_device_state;
         SENSOR_LOG_INFO("MAGNETIC_DEVICE [%s]\n",hall_device_state==1? "NEAR" : "FAR");
         input_report_rel(chip->idev, REL_RX, chip->state);
@@ -487,7 +478,6 @@ static int hall_device_probe(struct i2c_client *client,
     hrtimer_init(&chip->unlock_wakelock_timer, CLOCK_MONOTONIC, HRTIMER_MODE_REL);
     chip->unlock_wakelock_timer.function = hall_device_unlock_wakelock_work_func;
 
-<<<<<<< HEAD
     SENSOR_LOG_INFO("prob success\n");
 
     if (switch_dev_register(&cover_switch) < 0) {
@@ -496,10 +486,6 @@ static int hall_device_probe(struct i2c_client *client,
     }
 
     switch_set_state(&cover_switch, gpio_get_value(chip->irq.irq_pin) ? 0 : 1);
-=======
-
-    SENSOR_LOG_INFO("prob success\n");
->>>>>>> 38abbc664e2702a8a00898a75884443aa74c34e8
 
     return 0;
 
@@ -557,10 +543,7 @@ static int hall_device_suspend(struct device *dev)
      SENSOR_LOG_INFO("hall_device_remove\n");
     
      kfree(chip_data);
-<<<<<<< HEAD
      switch_dev_unregister(&cover_switch);
-=======
->>>>>>> 38abbc664e2702a8a00898a75884443aa74c34e8
      return 0;
  }
 

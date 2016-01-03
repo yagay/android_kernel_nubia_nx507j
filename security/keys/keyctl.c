@@ -375,7 +375,6 @@ error:
 }
 
 /*
-<<<<<<< HEAD
  * Invalidate a key.
  *
  * The key must be grant the caller Invalidate permission for this to work.
@@ -407,8 +406,6 @@ error:
 }
 
 /*
-=======
->>>>>>> 38abbc664e2702a8a00898a75884443aa74c34e8
  * Clear the specified keyring, creating an empty process keyring if one of the
  * special keyring IDs is used.
  *
@@ -1656,12 +1653,9 @@ SYSCALL_DEFINE5(keyctl, int, option, unsigned long, arg2, unsigned long, arg3,
 			(unsigned) arg4,
 			(key_serial_t) arg5);
 
-<<<<<<< HEAD
 	case KEYCTL_INVALIDATE:
 		return keyctl_invalidate_key((key_serial_t) arg2);
 
-=======
->>>>>>> 38abbc664e2702a8a00898a75884443aa74c34e8
 	default:
 		return -EOPNOTSUPP;
 	}

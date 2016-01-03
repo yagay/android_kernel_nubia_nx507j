@@ -152,12 +152,8 @@ extern long join_session_keyring(const char *name);
 extern struct work_struct key_gc_work;
 extern unsigned key_gc_delay;
 extern void keyring_gc(struct key *keyring, time_t limit);
-<<<<<<< HEAD
 extern void key_schedule_gc(time_t gc_at);
 extern void key_schedule_gc_links(void);
-=======
-extern void key_schedule_gc(time_t expiry_at);
->>>>>>> 38abbc664e2702a8a00898a75884443aa74c34e8
 extern void key_gc_keytype(struct key_type *ktype);
 
 extern int key_task_permission(const key_ref_t key_ref,
@@ -202,7 +198,6 @@ extern struct key *request_key_auth_new(struct key *target,
 extern struct key *key_get_instantiation_authkey(key_serial_t target_id);
 
 /*
-<<<<<<< HEAD
  * Determine whether a key is dead.
  */
 static inline bool key_is_dead(struct key *key, time_t limit)
@@ -214,8 +209,6 @@ static inline bool key_is_dead(struct key *key, time_t limit)
 }
 
 /*
-=======
->>>>>>> 38abbc664e2702a8a00898a75884443aa74c34e8
  * keyctl() functions
  */
 extern long keyctl_get_keyring_ID(key_serial_t, int);
@@ -244,10 +237,7 @@ extern long keyctl_reject_key(key_serial_t, unsigned, unsigned, key_serial_t);
 extern long keyctl_instantiate_key_iov(key_serial_t,
 				       const struct iovec __user *,
 				       unsigned, key_serial_t);
-<<<<<<< HEAD
 extern long keyctl_invalidate_key(key_serial_t);
-=======
->>>>>>> 38abbc664e2702a8a00898a75884443aa74c34e8
 
 extern long keyctl_instantiate_key_common(key_serial_t,
 					  const struct iovec __user *,

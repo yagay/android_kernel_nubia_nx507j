@@ -805,7 +805,6 @@ The keyctl syscall functions are:
      kernel and resumes executing userspace.
 
 
-<<<<<<< HEAD
  (*) Invalidate a key.
 
 	long keyctl(KEYCTL_INVALIDATE, key_serial_t key);
@@ -823,8 +822,6 @@ The keyctl syscall functions are:
      successful.
 
 
-=======
->>>>>>> 38abbc664e2702a8a00898a75884443aa74c34e8
 ===============
 KERNEL SERVICES
 ===============

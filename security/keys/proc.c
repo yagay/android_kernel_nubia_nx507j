@@ -242,11 +242,7 @@ static int proc_keys_show(struct seq_file *m, void *v)
 #define showflag(KEY, LETTER, FLAG) \
 	(test_bit(FLAG,	&(KEY)->flags) ? LETTER : '-')
 
-<<<<<<< HEAD
 	seq_printf(m, "%08x %c%c%c%c%c%c%c %5d %4s %08x %5d %5d %-9.9s ",
-=======
-	seq_printf(m, "%08x %c%c%c%c%c%c %5d %4s %08x %5d %5d %-9.9s ",
->>>>>>> 38abbc664e2702a8a00898a75884443aa74c34e8
 		   key->serial,
 		   showflag(key, 'I', KEY_FLAG_INSTANTIATED),
 		   showflag(key, 'R', KEY_FLAG_REVOKED),
@@ -254,10 +250,7 @@ static int proc_keys_show(struct seq_file *m, void *v)
 		   showflag(key, 'Q', KEY_FLAG_IN_QUOTA),
 		   showflag(key, 'U', KEY_FLAG_USER_CONSTRUCT),
 		   showflag(key, 'N', KEY_FLAG_NEGATIVE),
-<<<<<<< HEAD
 		   showflag(key, 'i', KEY_FLAG_INVALIDATED),
-=======
->>>>>>> 38abbc664e2702a8a00898a75884443aa74c34e8
 		   atomic_read(&key->usage),
 		   xbuf,
 		   key->perm,
