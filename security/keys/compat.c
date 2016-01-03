@@ -135,9 +135,12 @@ asmlinkage long compat_sys_keyctl(u32 option,
 		return compat_keyctl_instantiate_key_iov(
 			arg2, compat_ptr(arg3), arg4, arg5);
 
+<<<<<<< HEAD
 	case KEYCTL_INVALIDATE:
 		return keyctl_invalidate_key(arg2);
 
+=======
+>>>>>>> 38abbc664e2702a8a00898a75884443aa74c34e8
 	default:
 		return -EOPNOTSUPP;
 	}

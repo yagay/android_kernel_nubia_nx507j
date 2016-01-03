@@ -24,7 +24,11 @@ struct keyring_list {
 	unsigned short	maxkeys;	/* max keys this list can hold */
 	unsigned short	nkeys;		/* number of keys currently held */
 	unsigned short	delkey;		/* key to be unlinked by RCU */
+<<<<<<< HEAD
 	struct key __rcu *keys[0];
+=======
+	struct key	*keys[0];
+>>>>>>> 38abbc664e2702a8a00898a75884443aa74c34e8
 };
 
 

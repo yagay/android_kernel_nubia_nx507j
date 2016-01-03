@@ -955,6 +955,7 @@ void key_revoke(struct key *key)
 EXPORT_SYMBOL(key_revoke);
 
 /**
+<<<<<<< HEAD
  * key_invalidate - Invalidate a key.
  * @key: The key to be invalidated.
  *
@@ -977,6 +978,8 @@ void key_invalidate(struct key *key)
 EXPORT_SYMBOL(key_invalidate);
 
 /**
+=======
+>>>>>>> 38abbc664e2702a8a00898a75884443aa74c34e8
  * register_key_type - Register a type of key.
  * @ktype: The new key type.
  *
